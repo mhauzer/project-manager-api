@@ -1,4 +1,4 @@
-package com.mhalab.eve.domain;
+package com.mhalab.eve.model;
 
 import org.springframework.data.repository.CrudRepository;
 
