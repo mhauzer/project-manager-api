@@ -20,6 +20,10 @@ public class Person {
     @JsonIgnore
     private List<Task> tasks;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
+    @JsonIgnore
+    private List<UserAccount> accounts;
+
     public Person() {
     }
 
