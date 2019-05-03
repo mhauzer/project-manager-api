@@ -1,7 +1,5 @@
 package com.mhalab.eve.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 
 // MHA: I had to name the class UserAccount because when it was User, Postgresql needed it to be used
@@ -17,7 +15,6 @@ public class UserAccount {
     private String username;
 
     @Column(nullable=false)
-    @JsonIgnore
     private String password;
 
     @Column(nullable=false)
