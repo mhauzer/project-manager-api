@@ -1,4 +1,4 @@
-package com.mhalab.eve.model;
+package com.mhalab.projectmanager.model;
 
 public enum StatusType {
     TODO,

@@ -1,4 +1,4 @@
-package com.mhalab.eve.security;
+package com.mhalab.projectmanager.security;
 
 public class SecurityConstants {
     public static final String SECRET = "SecretKeyToGenJWTs";

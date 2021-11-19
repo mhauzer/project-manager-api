@@ -1,4 +1,4 @@
-package com.mhalab.eve.model;
+package com.mhalab.projectmanager.model;
 
 import javax.persistence.*;
 
@@ -8,15 +8,19 @@ import javax.persistence.*;
 @Entity
 public class Task {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(nullable=false, updatable=false)
     private long id;
 
-    @Column(columnDefinition = "text", nullable=false)
+    @Column(columnDefinition="text", nullable=false)
     private String description;
 
     @Column(nullable=false)
     private StatusType status;
+
+    @Column(nullable=false)
+    @Enumerated(EnumType.STRING)
+    private StatusType st; // just for testing
 
     @ManyToOne
     private Person owner;
@@ -67,6 +71,14 @@ public class Task {
 
     public void setOwner(Person owner) {
         this.owner = owner;
+    }
+
+    public StatusType getSt() {
+        return st;
+    }
+
+    public void setSt(StatusType st) {
+        this.st = st;
     }
 
     @Override

@@ -1,8 +1,8 @@
-package com.mhalab.eve;
+package com.mhalab.projectmanager;
 
-import com.mhalab.eve.model.PersonRepository;
-import com.mhalab.eve.model.TaskRepository;
-import com.mhalab.eve.model.UserAccountRepository;
+import com.mhalab.projectmanager.model.PersonRepository;
+import com.mhalab.projectmanager.model.TaskRepository;
+import com.mhalab.projectmanager.model.UserAccountRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 // TODO: https://stackoverflow.com/questions/49963618/postgresql-clob-datatype
 // TODO: https://stackoverflow.com/questions/28588311/correct-jpa-annotation-for-postgresqls-text-type-without-hibernate-annotations
@@ -28,10 +28,10 @@ public class EveApplication {
 	@Autowired
 	private UserAccountRepository userAccountRepository;
 
-	@Bean
-	public BCryptPasswordEncoder bCryptPasswordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
+//	@Bean
+//	public BCryptPasswordEncoder bCryptPasswordEncoder() {
+//		return new BCryptPasswordEncoder();
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(EveApplication.class, args);
